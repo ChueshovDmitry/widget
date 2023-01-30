@@ -15,10 +15,12 @@ spring:
       ddl-auto: none
       dialect: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
-
   mvc:
     pathmatch:
         matching-strategy: ANT_PATH_MATCHER
+  liquibase:
+    enabled: true
+    change-log: classpath:db.changelog/changelog-master.xml
 
 org:
   keycloak:
@@ -29,5 +31,4 @@ org:
       user: ${KEYCLOAK_AUTH_USER:userservice}
       password: ${KEYCLOAK_AUTH_PASSWORD:123}
       client_id: ${KEYCLOAK_AUTH_CLIENT_ID:ks-auth-client}
-
 

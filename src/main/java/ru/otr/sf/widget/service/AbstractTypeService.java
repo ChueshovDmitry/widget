@@ -14,5 +14,5 @@ public interface AbstractTypeService {
 
     TypeDto save(TypeDto typeDto);
 
-    TypeDto update(TypeDto typeDto);
+    TypeDto update(Long id,TypeDto typeDto);
 }

@@ -36,8 +36,8 @@ public class TypeController {
     }
 
 
-    @PatchMapping
-    public TypeDto updateType(@RequestBody TypeDto typeDto){
-       return abstractTypeService.update(typeDto);
+    @PatchMapping("/{id}")
+    public TypeDto updateType(@PathVariable Long id,@RequestBody TypeDto typeDto){
+       return abstractTypeService.update(id,typeDto);
     }
 }

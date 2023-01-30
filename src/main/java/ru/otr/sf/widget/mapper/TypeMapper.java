@@ -13,6 +13,7 @@ public interface TypeMapper {
     TypeDto typeToTypeDto(Type type);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @Mapping(target = "id", source = "id", ignore = true)
     Type updateTypeFromTypeDto(TypeDto typeDto, @MappingTarget Type type);
 
 

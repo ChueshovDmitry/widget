@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.otr.sf.widget.mapper.TypeMapper;
 import ru.otr.sf.widget.mapper.dto.TypeDto;
+import ru.otr.sf.widget.mapper.dto.UserWidgetDto;
 import ru.otr.sf.widget.model.Type;
 import ru.otr.sf.widget.repository.TypeRepository;
 import ru.otr.sf.widget.service.AbstractTypeService;
@@ -46,8 +47,8 @@ public class TypeService implements AbstractTypeService {
     }
 
     @Override
-    public TypeDto update(TypeDto typeDto) {
-        Type type = typeMapper.updateTypeFromTypeDto(typeDto, typeRepository.getReferenceById(typeDto.getId()));
+    public TypeDto update(Long id,TypeDto typeDto) {
+        Type type = typeMapper.updateTypeFromTypeDto(typeDto, typeRepository.getReferenceById(id));
         return typeMapper.typeToTypeDto(typeRepository.save(type));
     }
 }

@@ -1,7 +1,6 @@
 #    Widget Project
-
-# url swagger http://localhost:9092/swagger-ui/index.html
-* 
+url swagger http://localhost:9092/swagger-ui/index.html
+ 
 ![img.png](img.png)
 
 

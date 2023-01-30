@@ -4,7 +4,7 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
 
-    <changeSet id="1675073296589-1" author="Dmitry_Chueshov">
+    <changeSet id="create_type_widget_table" author="Dmitry_Chueshov">
         <createTable tableName="type_widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_type_widget"/>
@@ -15,7 +15,7 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="1675073407786-1" author="Dmitry_Chueshov">
+    <changeSet id="create_widget_table" author="Dmitry_Chueshov">
         <createTable tableName="widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_widget"/>
@@ -30,7 +30,7 @@
         <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="widget" constraintName="FK_WIDGET_ON_TYPE" referencedColumnNames="id" referencedTableName="type_widget"/>
     </changeSet>
 
-    <changeSet id="1675073452267-1" author="Dmitry_Chueshov">
+    <changeSet id="create_user_widget_table" author="Dmitry_Chueshov">
         <createTable tableName="user_widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_widget"/>

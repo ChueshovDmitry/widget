@@ -28,7 +28,7 @@ public class AuthUserService implements AbstractAuthUserService {
     @Override
     public String getUserUUID() {
         KeycloakPrincipal principal = (KeycloakPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String userId = principal.getKeycloakSecurityContext().getToken().getId();
+        String userId = principal.getKeycloakSecurityContext().getToken().getSubject();
         return userId;
     }
 }

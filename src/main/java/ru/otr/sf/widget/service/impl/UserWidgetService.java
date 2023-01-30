@@ -45,7 +45,7 @@ public class UserWidgetService implements AbstractUserWidgetService {
 
     @Override
     public List<UserWidgetDto> getAll() {
-        Stream<UserWidgetDto> userWidgetDtoStream = userWidgetRepository.findAll().stream().map(userWidgetMapper::userWidgetToUserWidgetDto);
+        Stream<UserWidgetDto> userWidgetDtoStream = userWidgetRepository.findAllByUserID(authUserService.getUserUUID()).stream().map(userWidgetMapper::userWidgetToUserWidgetDto);
         return userWidgetDtoStream.collect(Collectors.toList());
     }
 

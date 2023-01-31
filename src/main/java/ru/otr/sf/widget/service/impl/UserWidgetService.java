@@ -7,6 +7,7 @@ import ru.otr.sf.widget.mapper.UserWidgetMapper;
 import ru.otr.sf.widget.mapper.dto.UserWidgetDto;
 import ru.otr.sf.widget.model.UserWidget;
 import ru.otr.sf.widget.model.Widget;
+import ru.otr.sf.widget.repository.TypeRepository;
 import ru.otr.sf.widget.repository.UserWidgetRepository;
 import ru.otr.sf.widget.repository.WidgetRepository;
 import ru.otr.sf.widget.service.AbstractAuthUserService;
@@ -22,6 +23,7 @@ import java.util.stream.Stream;
 public class UserWidgetService implements AbstractUserWidgetService {
 
     private final UserWidgetRepository userWidgetRepository;
+    private final TypeRepository typeRepository;
     private final UserWidgetMapper userWidgetMapper;
     private final WidgetRepository widgetRepository;
     private final AbstractAuthUserService authUserService;
@@ -57,6 +59,7 @@ public class UserWidgetService implements AbstractUserWidgetService {
     @Override
     public UserWidgetDto update(Long id, UserWidgetDto userWidgetDto) {
         UserWidget userWidget = userWidgetMapper.updateUserWidgetFromUserWidgetDto(userWidgetDto, userWidgetRepository.getReferenceById(id));
+        userWidget.setType(typeRepository.getReferenceById(userWidgetDto.getType().getId()));
         userWidget.setWidget(widgetRepository.getReferenceById(userWidgetDto.getWidget().getId()));
         return userWidgetMapper.userWidgetToUserWidgetDto(userWidgetRepository.save(userWidget));
     }

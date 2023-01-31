@@ -49,11 +49,6 @@ public class Widget {
     @Column(name = "defaul_height")
     private Integer defaultHeight;
 
-    /**
-     * тип виджета
-     */
-    @ManyToOne
-    @JoinColumn(name = "type_id")
-    private Type type;
+
 
 }

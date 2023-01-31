@@ -14,6 +14,6 @@ public class TypeDto implements Serializable {
 
     private Long id;
     private String name;
-    private Integer width;
-    private Integer height;
+    private String width;
+    private String height;
 }

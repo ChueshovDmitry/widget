@@ -62,7 +62,6 @@ public class WidgetService implements AbstractWidgetService {
     @Override
     public WidgetDto update(Long id, WidgetDto widgetDto) {
         Widget widget = widgetMapper.updateWidgetFromWidgetDto(widgetDto, widgetRepository.getReferenceById(id));
-        widget.setType(typeRepository.getReferenceById(widgetDto.getType().getId()));
         return widgetMapper.widgetToWidgetDto(widgetRepository.save(widget));
     }
 }

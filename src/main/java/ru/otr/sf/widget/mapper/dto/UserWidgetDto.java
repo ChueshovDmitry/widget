@@ -1,6 +1,5 @@
 package ru.otr.sf.widget.mapper.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import ru.otr.sf.widget.model.UserWidget;
@@ -17,9 +16,10 @@ public class UserWidgetDto implements Serializable {
     private Long id;
     private String userID;
     private WidgetDto widget;
-    private Integer width;
-    private Integer height;
-    private Integer positionX;
-    private Integer positionY;
+    private String width;
+    private String height;
+    private String positionX;
+    private String positionY;
     private Boolean show;
+    private TypeDto type;
 }

@@ -15,5 +15,6 @@ public interface UserWidgetMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id",source = "id",ignore = true)
     @Mapping(target = "widget",source = "widget",ignore = true)
+    @Mapping(target = "type",source = "type",ignore = true)
     UserWidget updateUserWidgetFromUserWidgetDto(UserWidgetDto userWidgetDto, @MappingTarget UserWidget userWidget);
 }

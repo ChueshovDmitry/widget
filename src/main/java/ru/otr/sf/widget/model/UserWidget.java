@@ -46,12 +46,12 @@ public class UserWidget {
      * значение позиции по x
      */
     @Column(name = "position_x")
-    private Integer positionX;
+    private String positionX;
     /**
      * значение позиции по y
      */
     @Column(name = "position_y")
-    private Integer positionY;
+    private String positionY;
 
     /**
      * флг отображения виджета
@@ -59,6 +59,11 @@ public class UserWidget {
     @Column(name = "show")
     private Boolean show;
 
-
+    /**
+     * тип виджета
+     */
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private Type type;
 
 }

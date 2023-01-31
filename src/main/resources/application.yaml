@@ -5,7 +5,7 @@ keycloak:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5444/widget_app
+    url: jdbc:postgresql://localhost:5444/app
     username: dev
     password: admin
     driver-class-name: org.postgresql.Driver

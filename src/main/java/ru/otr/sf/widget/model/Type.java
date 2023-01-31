@@ -29,13 +29,13 @@ public class Type {
      * ширина
      */
     @Column(name = "width")
-    private Integer width;
+    private String width;
 
     /**
      * высота
      */
     @Column(name = "height")
-    private Integer height;
+    private String height;
 
 
 }

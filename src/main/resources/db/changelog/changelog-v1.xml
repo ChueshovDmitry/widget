@@ -4,18 +4,18 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
 
-    <changeSet id="create_type_widget_table" author="Dmitry_Chueshov">
+
+    <changeSet id="type_widget_table" author="Chueshov Dmitry">
         <createTable tableName="type_widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_type_widget"/>
             </column>
             <column name="name" type="VARCHAR(255)"/>
-            <column name="width" type="INT"/>
-            <column name="height" type="INT"/>
+            <column name="width" type="VARCHAR(255)"/>
+            <column name="height" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-
-    <changeSet id="create_widget_table" author="Dmitry_Chueshov">
+    <changeSet id="widget_table" author="Chueshov Dmitry">
         <createTable tableName="widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_widget"/>
@@ -23,28 +23,30 @@
             <column name="name" type="VARCHAR(255)"/>
             <column name="url" type="VARCHAR(255)"/>
             <column name="description" type="VARCHAR(255)"/>
-            <column name="defaul_width" type="INT"/>
-            <column name="defaul_height" type="INT"/>
-            <column name="type_id" type="BIGINT"/>
+            <column name="default_width" type="VARCHAR(255)"/>
+            <column name="default_height" type="VARCHAR(255)"/>
         </createTable>
-        <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="widget" constraintName="FK_WIDGET_ON_TYPE" referencedColumnNames="id" referencedTableName="type_widget"/>
     </changeSet>
 
-    <changeSet id="create_user_widget_table" author="Dmitry_Chueshov">
+
+    <changeSet id="user_widget_table" author="Chueshov Dmitry">
         <createTable tableName="user_widget">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_widget"/>
             </column>
             <column name="user_id" type="VARCHAR(255)"/>
             <column name="widget_id" type="BIGINT"/>
-            <column name="width" type="INT"/>
-            <column name="height" type="INT"/>
-            <column name="position_x" type="INT"/>
-            <column name="position_y" type="INT"/>
+            <column name="width" type="VARCHAR(255)"/>
+            <column name="height" type="VARCHAR(255)"/>
+            <column name="position_x" type="VARCHAR(255)"/>
+            <column name="position_y" type="VARCHAR(255)"/>
             <column name="show" type="BOOLEAN"/>
+            <column name="type_id" type="BIGINT"/>
         </createTable>
+        <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="user_widget" constraintName="FK_USER_WIDGET_ON_TYPE" referencedColumnNames="id" referencedTableName="type_widget"/>
         <addForeignKeyConstraint baseColumnNames="widget_id" baseTableName="user_widget" constraintName="FK_USER_WIDGET_ON_WIDGET" referencedColumnNames="id" referencedTableName="widget"/>
     </changeSet>
+
 
 
 </databaseChangeLog>

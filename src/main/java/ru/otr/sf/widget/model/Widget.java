@@ -40,14 +40,14 @@ public class Widget {
     /**
      * ширина по умолчанию
      */
-    @Column(name = "defaul_width")
-    private Integer defaultWidth;
+    @Column(name = "default_width")
+    private String defaultWidth;
 
     /**
      * ширина по высота по умолчанию
      */
-    @Column(name = "defaul_height")
-    private Integer defaultHeight;
+    @Column(name = "default_height")
+    private String defaultHeight;
 
 
 

@@ -13,6 +13,5 @@ public interface WidgetMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id", source = "id", ignore = true)
-    @Mapping(target = "type",source = "type",ignore = true)
     Widget updateWidgetFromWidgetDto(WidgetDto widgetDto, @MappingTarget Widget widget);
 }

@@ -36,12 +36,12 @@ public class UserWidget {
      * ширина по умолчанию
      */
     @Column(name = "width")
-    private Integer width;
+    private String width;
     /**
      * высота по умолчанию
      */
     @Column(name = "height")
-    private Integer height;
+    private String height;
     /**
      * значение позиции по x
      */

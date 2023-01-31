@@ -21,7 +21,7 @@ INSERT INTO user_widget (id, user_id, widget_id, width, height, position_x, posi
                                                     (2, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 2, 130, 130, 22, 44, true),
                                                     (3, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 3, 130, 130, 22, 44, true),
                                                     (4, 'd3bc29de-9096-4eee-9fa0-e0267c0faea2', 4, 130, 130, 22, 44, false),
-                                                    (5, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 5, 130, 130, 22, 44, true),
+                                                    (5, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 6, 130, 130, 22, 44, true),
                                                     (6, 'd3bc29de-9096-4eee-9fa0-e0267c0faea2', 7, 130, 130, 22, 44, true),
-                                                    (7, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 7, 130, 130, 22, 44, true),
-                                                    (8, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 7, 130, 130, 22, 44, false);
+                                                    (7, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 4, 130, 130, 22, 44, true),
+                                                    (8, '57e8b874-b8e0-4c3d-b2dd-2e50ef11d4c5', 6, 130, 130, 22, 44, false);

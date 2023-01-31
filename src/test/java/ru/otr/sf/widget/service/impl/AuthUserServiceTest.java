@@ -23,7 +23,7 @@ class AuthUserServiceTest {
     @Test
     void getAllRolesFromGrandAuthority() {
 
-        List<String> inspectedList = List.of("ROLE_WIDGET_ONE", "ROLE_WIDGET_two", "ROdLE_WIdDGET_two");
+        List<String> inspectedList = List.of("ROLE_KC_WIDGET_ONE", "ROLE_KC_WIDGET_two", "ROdLE_KC_WIDGET_two");
 
         doReturn(inspectedList).when(authUserService).getAllRolesFromGrandAuthority();
 

@@ -21,8 +21,8 @@ public class AuthUserService implements AbstractAuthUserService {
     @Override
     public List<String> getAllWidgetNameByUserRole(){
         return getAllRolesFromGrandAuthority().stream().
-                filter(s -> s.contains("ROLE_WIDGET_")).
-                map(s -> s.replace("ROLE_WIDGET_", ""))
+                filter(s -> s.contains("ROLE_KC_WIDGET_")).
+                map(s -> s.replace("ROLE_KC_WIDGET_", ""))
                 .collect(Collectors.toList());
     }
     @Override

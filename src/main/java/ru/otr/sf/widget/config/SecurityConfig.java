@@ -38,24 +38,9 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         authManagerBuilder.authenticationProvider(keycloakAuthenticationProvider);
     }
 
-
-    static class ModdedRequestMatcher implements RequestMatcher {
-
-        private static final List<String> ALLOWED_ENDPOINTS = Collections.singletonList("api/");
-
-        private Pattern allowedMethods = Pattern.compile("^(GET|HEAD|TRACE|OPTIONS|DELETE|POST|PUT|PATCH)$");
-        private Pattern allowedEndpoints = Pattern.compile(
-                String.format("^\\/(%s)$", StringUtils.arrayToDelimitedString(ALLOWED_ENDPOINTS.toArray(), "|")));
-
-        public boolean matches(HttpServletRequest request) {
-            String uri = request.getRequestURI().replaceFirst(request.getContextPath(), "");
-            return !allowedEndpoints.matcher(uri).matches() && !allowedMethods.matcher(request.getMethod()).matches();
-        }
-    }
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        http.csrf().requireCsrfProtectionMatcher(new ModdedRequestMatcher()).and()
-                //.csrf().disable()
+        http.csrf().disable()
                 .authorizeRequests()
 //                .antMatchers("api/**").authenticated()
                 .antMatchers("/api/**", "/api/types/*",

@@ -47,6 +47,4 @@
         <addForeignKeyConstraint baseColumnNames="widget_id" baseTableName="user_widget" constraintName="FK_USER_WIDGET_ON_WIDGET" referencedColumnNames="id" referencedTableName="widget"/>
     </changeSet>
 
-
-
 </databaseChangeLog>

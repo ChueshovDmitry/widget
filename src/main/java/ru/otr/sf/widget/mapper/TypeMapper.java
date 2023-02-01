@@ -3,7 +3,6 @@ package ru.otr.sf.widget.mapper;
 import org.mapstruct.*;
 import ru.otr.sf.widget.mapper.dto.TypeDto;
 import ru.otr.sf.widget.model.Type;
-import ru.otr.sf.widget.model.Widget;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface TypeMapper {

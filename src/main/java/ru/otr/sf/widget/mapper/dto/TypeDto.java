@@ -1,6 +1,7 @@
 package ru.otr.sf.widget.mapper.dto;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 import ru.otr.sf.widget.model.Type;
 
 import java.io.Serializable;

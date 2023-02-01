@@ -2,13 +2,10 @@ package ru.otr.sf.widget.controller;
 
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 import ru.otr.sf.widget.mapper.dto.UserWidgetDto;
-import ru.otr.sf.widget.mapper.dto.WidgetDto;
 import ru.otr.sf.widget.service.AbstractUserWidgetService;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 @RestController

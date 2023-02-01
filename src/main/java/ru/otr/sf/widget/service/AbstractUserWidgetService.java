@@ -1,8 +1,6 @@
 package ru.otr.sf.widget.service;
 
-import org.springframework.data.domain.PageRequest;
 import ru.otr.sf.widget.mapper.dto.UserWidgetDto;
-import ru.otr.sf.widget.mapper.dto.WidgetDto;
 
 import java.util.List;
 

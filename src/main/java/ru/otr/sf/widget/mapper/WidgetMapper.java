@@ -1,8 +1,8 @@
 package ru.otr.sf.widget.mapper;
 
 import org.mapstruct.*;
-import ru.otr.sf.widget.model.Widget;
 import ru.otr.sf.widget.mapper.dto.WidgetDto;
+import ru.otr.sf.widget.model.Widget;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface WidgetMapper {

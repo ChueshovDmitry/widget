@@ -6,13 +6,11 @@ import org.springframework.stereotype.Service;
 import ru.otr.sf.widget.mapper.UserWidgetMapper;
 import ru.otr.sf.widget.mapper.dto.UserWidgetDto;
 import ru.otr.sf.widget.model.UserWidget;
-import ru.otr.sf.widget.model.Widget;
 import ru.otr.sf.widget.repository.TypeRepository;
 import ru.otr.sf.widget.repository.UserWidgetRepository;
 import ru.otr.sf.widget.repository.WidgetRepository;
 import ru.otr.sf.widget.service.AbstractAuthUserService;
 import ru.otr.sf.widget.service.AbstractUserWidgetService;
-import ru.otr.sf.widget.service.AbstractWidgetService;
 
 import java.util.List;
 import java.util.stream.Collectors;

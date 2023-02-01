@@ -7,7 +7,6 @@ import org.springframework.web.context.request.WebRequest;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.Date;
-import java.util.NoSuchElementException;
 
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 

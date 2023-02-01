@@ -16,8 +16,8 @@ public class UserController {
 
     private final AbstractAuthUserService authUserService;
 
-     @GetMapping("/user")
-    public UserDto getUserFullName(){
+     @GetMapping("/info")
+    public UserDto getInformationAboutUser(){
         return authUserService.getUserFullName();
     }
 

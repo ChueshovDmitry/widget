@@ -1,7 +1,6 @@
 package ru.otr.sf.widget.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.otr.sf.widget.model.Type;
 import ru.otr.sf.widget.model.UserWidget;
 
 import java.util.List;

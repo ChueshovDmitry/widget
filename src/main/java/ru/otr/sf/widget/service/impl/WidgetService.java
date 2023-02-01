@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import ru.otr.sf.widget.mapper.WidgetMapper;
 import ru.otr.sf.widget.mapper.dto.WidgetDto;
 import ru.otr.sf.widget.model.Widget;
-import ru.otr.sf.widget.repository.TypeRepository;
 import ru.otr.sf.widget.repository.WidgetRepository;
 import ru.otr.sf.widget.service.AbstractAuthUserService;
+import ru.otr.sf.widget.service.AbstractUserWidgetService;
 import ru.otr.sf.widget.service.AbstractWidgetService;
 
 import java.util.List;
@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 public class WidgetService implements AbstractWidgetService {
 
     private final WidgetRepository widgetRepository;
-    private final TypeRepository typeRepository;
     private final WidgetMapper widgetMapper;
+    private final AbstractUserWidgetService userWidgetService;
     private final AbstractAuthUserService authUserService;
 
     @Override
@@ -57,6 +57,13 @@ public class WidgetService implements AbstractWidgetService {
         List<String> allWidgetNameByUserRole = authUserService.getAllWidgetNameByUserRole();
         List<Widget> allWidgetForUser = widgetRepository.findAllByNameIgnoreCaseIsIn(allWidgetNameByUserRole);
         return allWidgetForUser.stream().map(widgetMapper::widgetToWidgetDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<WidgetDto> getAllWidgetByUserRoleWithOutUserWidgets() {
+        List<Long> listIdUserWidgets = userWidgetService.getAll().stream().map(s -> s.getWidget().getId()).collect(Collectors.toList());
+        List<Widget> allByNameIgnoreCaseIsInAndIdIsNotIn = widgetRepository.findAllByNameIgnoreCaseIsInAndIdIsNotIn(authUserService.getAllWidgetNameByUserRole(), listIdUserWidgets);
+        return allByNameIgnoreCaseIsInAndIdIsNotIn.stream().map(widgetMapper::widgetToWidgetDto).collect(Collectors.toList());
     }
 
     @Override

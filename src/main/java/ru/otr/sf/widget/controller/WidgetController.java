@@ -26,6 +26,10 @@ public class WidgetController {
     public List<WidgetDto> getWidgetsByUserRoles(){
         return abstractWidgetService.getAllWidgetByUserRole();
     }
+    @GetMapping("/withOutUserWidgets")
+    public List<WidgetDto> getAllWidgetByUserRoleWithOutUserWidgets(){
+        return abstractWidgetService.getAllWidgetByUserRoleWithOutUserWidgets();
+    }
     @GetMapping("/{id}")
     public WidgetDto getWidget(@PathVariable Long id){
         return abstractWidgetService.getById(id);

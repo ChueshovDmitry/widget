@@ -1,5 +1,5 @@
 #    Widget Project
-url swagger http://localhost:9092/swagger-ui/index.html
+url swagger http://localhost:8086/swagger-ui/index.html
 plugin create docker image
 mvn spring-boot:build-image
 

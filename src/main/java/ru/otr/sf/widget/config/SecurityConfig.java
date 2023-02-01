@@ -44,7 +44,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .authorizeRequests()
 //                .antMatchers("api/**").authenticated()
                 .antMatchers("/api/**", "/api/types/*",
-                        "/api/user_widgets/*","/api/widgets/*").authenticated()
+                        "/api/user_widgets/*","/api/widgets/*","/api/users/*").authenticated()
                 .antMatchers("/auth/*", "/some/*").permitAll();
     }
     @Bean

@@ -1,8 +1,8 @@
 package ru.otr.sf.widget.service.impl;
 
-import org.keycloak.KeycloakPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import ru.otr.sf.widget.mapper.dto.UserDto;
 import ru.otr.sf.widget.service.AbstractAuthUserService;
 
 import java.util.List;
@@ -27,8 +27,11 @@ public class AuthUserService implements AbstractAuthUserService {
     }
     @Override
     public String getUserUUID() {
-        KeycloakPrincipal principal = (KeycloakPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String userId = principal.getKeycloakSecurityContext().getToken().getSubject();
-        return userId;
+        return getPrincipal().getKeycloakSecurityContext().getToken().getSubject();
+    }
+
+    @Override
+    public UserDto getUserFullName() {
+        return UserDto.builder().userFullName(getPrincipal().getKeycloakSecurityContext().getToken().getName()).build();
     }
 }

@@ -14,6 +14,6 @@ public interface WidgetRepository extends JpaRepository<Widget, Long> {
 
     List<Widget> findAllByNameIgnoreCaseIsIn(List<String>name);
 
-    List<Widget> findAllByNameIgnoreCaseIsInAndIdIsNotContainingIsIn(List<String>name,List<Long>id);
+    List<Widget> findAllByNameIgnoreCaseIsInAndIdIsNotIn(List<String>name,List<Long>id);
 
 }

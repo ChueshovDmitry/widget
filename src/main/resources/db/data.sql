@@ -1,17 +1,17 @@
-INSERT INTO type_widget (id, name, width, height) VALUES
-                                                      (1, 'top-left', '200px', '100px'),
-                                                      (2, 'top-center', '200px', '100px'),
-                                                      (3, 'top-right', '200px', '100px'),
-                                                      (5, 'center-left', '200px', '100px'),
-                                                      (6, 'center-right', '200px', '100px'),
-                                                      (7, 'bottom-left', '200px', '100px'),
-                                                      (8, 'bottom-center', '200px', '100px'),
-                                                      (9, 'bottom-right', '200px', '100px');
+INSERT INTO type_widget ( name, width, height) VALUES
+                                                      ('top-left', '100px', '200px'),
+                                                      ('top-center', '100px', '200px'),
+                                                      ('top-right', '100px', '200px'),
+                                                      ('center-left', '100px', '200px'),
+                                                      ('center-right', '100px', '200px'),
+                                                      ('bottom-left', '100px', '200px'),
+                                                      ('bottom-center', '100px', '200px'),
+                                                      ('bottom-right', '100px', '200px');
 
 
--- INSERT INTO widget (id, name, url, description, defaul_width, defaul_height, type_id) VALUES
---                                                      (1, 'whether_now', 'http://wtether', 'текущая погода', 128, 128, 1),
---                                                      (2, 'finance_region', 'http://region', 'финансовая статистика региона', 128, 128, 2),
+INSERT INTO widget (name, url, description, default_width, default_height) VALUES
+                                                     ('CURRENCY', 'http://auth-service:3010/', 'Курсы валют из ЦБ', 128, 128),
+                                                     ('MESSAGE', 'http://auth-service:3020/', 'Tех поддержка', 128, 128);
 --                                                      (3, 'statistics_region', 'http://statistics', 'статистика региона', 128, 128, 3),
 --                                                      (4, 'exchange_rates ', 'http://exchange_rates', 'курс валют нацбанка', 128, 128, 4),
 --                                                      (5, 'ria_news', 'https://ria.ru/', 'новости', 128, 128, 5),

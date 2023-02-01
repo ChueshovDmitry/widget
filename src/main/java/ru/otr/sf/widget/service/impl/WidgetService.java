@@ -62,9 +62,12 @@ public class WidgetService implements AbstractWidgetService {
     @Override
     public List<WidgetDto> getAllWidgetByUserRoleWithOutUserWidgets() {
         List<Long> listIdUserWidgets = userWidgetService.getAll().stream().map(s -> s.getWidget().getId()).collect(Collectors.toList());
-        List<Widget> allByNameIgnoreCaseIsInAndIdIsNotIn = widgetRepository.findAllByNameIgnoreCaseIsInAndIdIsNotIn(authUserService.getAllWidgetNameByUserRole(), listIdUserWidgets);
-        return allByNameIgnoreCaseIsInAndIdIsNotIn.stream().map(widgetMapper::widgetToWidgetDto).collect(Collectors.toList());
-    }
+        if(listIdUserWidgets.size()>0){
+            List<Widget> allByNameIgnoreCaseIsInAndIdIsNotIn = widgetRepository.findAllByNameIgnoreCaseIsInAndIdIsNotIn(authUserService.getAllWidgetNameByUserRole(), listIdUserWidgets);
+            return allByNameIgnoreCaseIsInAndIdIsNotIn.stream().map(widgetMapper::widgetToWidgetDto).collect(Collectors.toList());
+        }else
+            return getAllWidgetByUserRole();
+           }
 
     @Override
     public WidgetDto update(Long id, WidgetDto widgetDto) {

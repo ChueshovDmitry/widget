@@ -46,7 +46,7 @@ public class TypeService implements AbstractTypeService {
     }
 
     @Override
-    public TypeDto update(Long id,TypeDto typeDto) {
+    public TypeDto update(Long id, TypeDto typeDto) {
         Type type = typeMapper.updateTypeFromTypeDto(typeDto, typeRepository.getReferenceById(id));
         return typeMapper.typeToTypeDto(typeRepository.save(type));
     }

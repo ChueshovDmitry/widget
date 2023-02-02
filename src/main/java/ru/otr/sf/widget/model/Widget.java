@@ -32,6 +32,12 @@ public class Widget {
     private String url;
 
     /**
+     * url
+     */
+    @Column(name = "action_url")
+    private String actionUrl;
+
+    /**
      * описание виджета
      */
     @Column(name = "description")

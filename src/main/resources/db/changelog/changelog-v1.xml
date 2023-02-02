@@ -30,7 +30,6 @@
         </createTable>
     </changeSet>
 
-
     <changeSet id="user_widget_table" author="Chueshov Dmitry">
         <createTable tableName="user_widget">
             <column autoIncrement="true" name="id" type="BIGINT">

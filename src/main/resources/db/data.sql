@@ -11,7 +11,7 @@ INSERT INTO type_widget ( name, width, height) VALUES
 
 INSERT INTO widget (name, url, action_url, description, default_width, default_height) VALUES
                                                      ('CURRENCY', 'http://auth-service:3010/', 'http://auth-service:3010/currency','Курсы валют из ЦБ', 128, 128),
-                                                     ('MESSAGE', 'http://auth-service:3020/', 'Tех поддержка', 128, 128);
+                                                     ('MESSAGE', 'http://auth-service:3020/', null ,'Tех поддержка', 128, 128);
 --                                                      (3, 'statistics_region', 'http://statistics', 'статистика региона', 128, 128, 3),
 --                                                      (4, 'exchange_rates ', 'http://exchange_rates', 'курс валют нацбанка', 128, 128, 4),
 --                                                      (5, 'ria_news', 'https://ria.ru/', 'новости', 128, 128, 5),

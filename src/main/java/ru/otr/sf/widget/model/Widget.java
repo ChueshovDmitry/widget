@@ -32,7 +32,7 @@ public class Widget {
     private String url;
 
     /**
-     * url
+     * action url
      */
     @Column(name = "action_url")
     private String actionUrl;

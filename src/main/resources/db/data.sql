@@ -9,8 +9,8 @@ INSERT INTO type_widget ( name, width, height) VALUES
                                                       ('bottom-right', '100px', '200px');
 
 
-INSERT INTO widget (name, url, description, default_width, default_height) VALUES
-                                                     ('CURRENCY', 'http://auth-service:3010/', 'Курсы валют из ЦБ', 128, 128),
+INSERT INTO widget (name, url, action_url, description, default_width, default_height) VALUES
+                                                     ('CURRENCY', 'http://auth-service:3010/', 'http://auth-service:3010/currency','Курсы валют из ЦБ', 128, 128),
                                                      ('MESSAGE', 'http://auth-service:3020/', 'Tех поддержка', 128, 128);
 --                                                      (3, 'statistics_region', 'http://statistics', 'статистика региона', 128, 128, 3),
 --                                                      (4, 'exchange_rates ', 'http://exchange_rates', 'курс валют нацбанка', 128, 128, 4),

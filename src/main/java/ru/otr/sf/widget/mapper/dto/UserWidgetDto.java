@@ -16,10 +16,10 @@ public class UserWidgetDto implements Serializable {
     private Long id;
     private String userID;
     private WidgetDto widget;
-    private String width;
-    private String height;
-    private String positionX;
-    private String positionY;
-    private Boolean show;
+    private Integer width;
+    private Integer height;
+    private Integer position;
+    private Integer line;
+    private Integer lineHeight;
     private TypeDto type;
 }

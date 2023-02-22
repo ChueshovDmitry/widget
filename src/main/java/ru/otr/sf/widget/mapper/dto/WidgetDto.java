@@ -18,7 +18,5 @@ public class WidgetDto implements Serializable {
     private String url;
     private String actionUrl;
     private String description;
-    private String defaultWidth;
-    private String defaultHeight;
 
 }

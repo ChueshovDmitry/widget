@@ -43,17 +43,6 @@ public class Widget {
     @Column(name = "description")
     private String description;
 
-    /**
-     * ширина по умолчанию
-     */
-    @Column(name = "default_width")
-    private String defaultWidth;
-
-    /**
-     * ширина по высота по умолчанию
-     */
-    @Column(name = "default_height")
-    private String defaultHeight;
 
 
 

@@ -36,28 +36,23 @@ public class UserWidget {
      * ширина по умолчанию
      */
     @Column(name = "width")
-    private String width;
+    private Integer width;
     /**
      * высота по умолчанию
      */
     @Column(name = "height")
-    private String height;
+    private Integer height;
     /**
      * значение позиции по x
      */
-    @Column(name = "position_x")
-    private String positionX;
-    /**
-     * значение позиции по y
-     */
-    @Column(name = "position_y")
-    private String positionY;
+    @Column(name = "position")
+    private Integer position;
 
-    /**
-     * флг отображения виджета
-     */
-    @Column(name = "show")
-    private Boolean show;
+    @Column(name = "line")
+    private Integer line;
+
+    @Column(name = "line_height")
+    private Integer lineHeight;
 
     /**
      * тип виджета

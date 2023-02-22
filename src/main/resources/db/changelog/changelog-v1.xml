@@ -25,8 +25,6 @@
             <column name="url" type="VARCHAR(255)"/>
             <column name="action_url" type="VARCHAR(255)"/>
             <column name="description" type="VARCHAR(255)"/>
-            <column name="default_width" type="VARCHAR(255)"/>
-            <column name="default_height" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
 
@@ -37,11 +35,11 @@
             </column>
             <column name="user_id" type="VARCHAR(255)"/>
             <column name="widget_id" type="BIGINT"/>
-            <column name="width" type="VARCHAR(255)"/>
-            <column name="height" type="VARCHAR(255)"/>
-            <column name="position_x" type="VARCHAR(255)"/>
-            <column name="position_y" type="VARCHAR(255)"/>
-            <column name="show" type="BOOLEAN"/>
+            <column name="width" type="INTEGER"/>
+            <column name="height" type="INTEGER"/>
+            <column name="line_height" type="INTEGER"/>
+            <column name="line" type="INTEGER"/>
+            <column name="position" type="INTEGER"/>
             <column name="type_id" type="BIGINT"/>
         </createTable>
         <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="user_widget" constraintName="FK_USER_WIDGET_ON_TYPE" referencedColumnNames="id" referencedTableName="type_widget"/>
